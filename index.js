@@ -4,9 +4,9 @@
        
        Programacion de Dispositivos Moviles
 
-       Rafael Urdaneta University - 2022C
+       Universidad Rafael Urdaneta - 2022C
 
-       Jairo Perez ID.28.336.214
+       Jairo Perez CI.28.336.214
 
 
        
