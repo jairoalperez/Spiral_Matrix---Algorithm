@@ -4,20 +4,20 @@
        
        Programacion de Dispositivos Moviles
 
-       Universidad Rafael Urdaneta - 2022C
+       Rafael Urdaneta University - 2022C
 
-       Jairo Perez C.I.28.336.214
+       Jairo Perez ID.28.336.214
 
 
        
-            En este quiz se requirio que se desarrollara un algoritmo
-            para leer una matriz recorriendo los elementos de la matriz
-            en el sentido de las agujas del reloj (patron de caracol).
+            In this quiz, the requirement was to develop an algorithm
+            to read a matrix by traversing its elements in a 
+            clockwise direction (snail pattern).
 
 */
 
-//Esta matriz puede ser cambiada por cualquier otra matriz
-const matriz = [
+//This matrix can be changed to any other matrix
+const matrix = [
 
   [ 1,  2,  3,  4,  5],
   [ 6,  7,  8,  9, 10],
@@ -27,22 +27,21 @@ const matriz = [
 
 ];
 
-//Esta aporcion de codigo sera el algoritmo como tal
-const caracol = (array) => {
+//This portion of the code will be the actual algorithm
+const snail = (array) => {
 
-  //se declara la variable que sera el arreglo final
+  //We declare the variable that will be the final array
   let final = [];
 
   /*  
-      Usamos un ciclo while que no se detendra hasta que 
-      se recorran todos los numeros de la matriz, primero
-      obtenemos el primer arreglo dentro del arreglo de
-      arreglos, luego con el metodo map() para obtener el
-      ultimo numero de cada arreglo, y se van pusheando
-      al arreglo final, luego vamos a reversar toda la
-      matriz y cada elemeto dentro de ella, con esto el
-      ciclo continua y vamos obteniendo todos los numeros
-      en orden de caracol.
+      We use a while loop that won't stop until
+      all numbers in the matrix are traversed. First,
+      we get the first array inside the array of arrays,
+      then with the map() method we get the last number
+      of each array, and push them into the final array.
+      Then, we reverse the entire matrix and each element 
+      inside it, allowing the loop to continue and 
+      retrieve all the numbers in snail order.
   */
   while (array.length) {
     final.push(...array.shift());
@@ -50,11 +49,11 @@ const caracol = (array) => {
     array.reverse().map(x => x.reverse());
   }
 
-  //Por ultimo retornamos el arreglo final
+  //Finally, we return the final array
   return final
 }
 
-//Mostrando por consola
-console.log('\n\n\nLa matriz dada inicialmente es la siguiente: \n')
-console.log(matriz)
-console.log('\nLa matriz recorrida en forma de caracol tiene el siguiente RESULTADO: [' + caracol(matriz) + '] \n\n\n')
+//Displaying in console
+console.log('\n\n\nThe initial matrix is the following: \n')
+console.log(matrix)
+console.log('\nThe matrix traversed in snail pattern gives the following RESULT: [' + snail(matrix) + '] \n\n\n')
